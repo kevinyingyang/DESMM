@@ -3,4 +3,4 @@ code
 
 Repository for sharing code. 
 
-test
+athena - manuscript project code
