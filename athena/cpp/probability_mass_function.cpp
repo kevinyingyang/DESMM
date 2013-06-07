@@ -32,7 +32,7 @@ namespace yalecg {
     assert_8uc1_image(image);
     reset();
     initialize(image,level);
-    utility_t::level_domain_subdivision_in(sbd_vec_,height_,width_,level,true);
+    utility_t::level_domain_subdivision_in(sbd_vec_,height_,width_,level,utility_t::LATTICE_SHIFTED);
     compute_dft_coefficient_histogram();
     compute_winner_attributes();
     compute_pmf_in(pmf);
