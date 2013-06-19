@@ -6,6 +6,7 @@ HEADERS += autocorrelation_function.hpp         \
            probability_mass_function.hpp        \
            text_height_estimation.hpp           \
            rose_of_directions.hpp               \
+           journet_features.hpp                 \
 
 SOURCES += autocorrelation_function.cpp         \
            predominant_frequency_descriptor.cpp \
@@ -13,6 +14,7 @@ SOURCES += autocorrelation_function.cpp         \
            probability_mass_function.cpp        \
            text_height_estimation.cpp           \
            rose_of_directions.cpp               \
+           journet_features.cpp                 \
 
 LIBS += -lopencv_core       \
         -lopencv_highgui    \

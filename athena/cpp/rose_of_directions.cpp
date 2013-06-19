@@ -19,15 +19,13 @@ namespace yalecg {
   //####################################################//
 
   void rose_of_directions::compute_from_image_in(std::vector<float>& rose_vec, const image_t& image) {
+    if (image.type() != CV_8UC1) {
+      std::cerr << "ASSERT - (image.type() == CV_8UC1) failed" << std::endl;
+      exit(2);
+    }
     acf_t acf;
     image_t img_acf;
-    if (image.type() != CV_8UC1) {
-      image_t image_gray(image.size().height,image.size().width,CV_8UC1);
-      cv::cvtColor(image,image_gray,CV_RGB2GRAY);
-      acf.compute_in(img_acf,image_gray);
-    } else {
-      acf.compute_in(img_acf,image);
-    }
+    acf.compute_in(img_acf,image);
     compute_from_acf_in(rose_vec,img_acf);
   }
 
