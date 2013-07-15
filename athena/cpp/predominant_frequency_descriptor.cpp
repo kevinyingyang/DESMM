@@ -99,6 +99,8 @@ namespace yalecg {
       dft_vec_[i].second = f_dft->at<cv::Vec2f>(i,0)[1];
     }
     if (debug_flag_) { debug_discrete_fourier_transform(); }
+    if (f)     { delete f;     f     = 0; }
+    if (f_dft) { delete f_dft; f_dft = 0; }
   }
 
   void predominant_frequency_descriptor::predominant_frequency_in(std::size_t& coeff_idx,
